@@ -1,21 +1,23 @@
 #include <iostream>
-#include <vector>
-
-//typedef  std::vector<std::pair<std::string, int>> pairlist_t;
-//typedef std::string string_t;
-//typedef int num_t;
-
-using string_t = std::string;
-using num_t = int;
 
 int main(){
-    //pairlist_t pairList;
+    int students = 20;
 
-    string_t firstName = "Felipe";
-    num_t age = 15;
+    //students = students + 1;
+    //students+=1;
+    //students++;
 
-    std::cout << firstName << '\n';
-    std::cout << age << '\n';
+    //students = students - 1;
+    //students-=1;
+    //students--;
+
+    //students = students * 2;
+    //students*=2;
+
+    //students = students / 3;
+    //students/=3;
+
+    std::cout << students << std::endl;
 
     return 0;
 }
