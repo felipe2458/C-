@@ -1,45 +1,21 @@
 #include <iostream>
 #include <limits>
 
+int sum(int num1, int num2){
+    return num1 + num2;
+}
+
 int main(){
-    using namespace std;
+    int num1;
+    int num2;
 
-    int number;
-    int max = 2147483647;
-    char finish = 'n';
+    std::cout << "Add two numbers together!" << std::endl;
+    std::cout << "Num1:";
+    std::cin >> num1;
+    std::cout << "Num2:";
+    std::cin >> num2;
 
-    do{
-        cout << "enter a number and watch it go down to 0!" << endl;
-        cin >> number;
-
-        while(cin.fail() || number <= 0){
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Please choose a number between 1 and " << max << endl;
-            cin >> number;
-        }
-
-        while(number > 0){
-            number--;
-            cout << number << endl;
-        }
-
-        cout << "Do you want to continue? [y/n]" << endl;
-        cin >> finish;
-
-        while(cin.fail()){
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Please enter y or n" << endl;
-            cin >> finish;
-        }
-
-        while(finish != 'y' && finish != 'Y' && finish != 'n' && finish != 'N'){
-            cout << "Please enter y or n" << endl;
-            cin >> finish;
-        }
-
-    }while(finish == 'y' || finish == 'Y');
+    std::cout << "Result: " << sum(num1, num2) << std::endl;
 
     return 0;
 }
