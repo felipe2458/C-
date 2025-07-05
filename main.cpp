@@ -1,14 +1,19 @@
 #include <iostream>
 
 int main(){
-    //double x = (int) 3.14;
-    //char x = 100;
+    using namespace std;
 
-    int correct = 8;
-    int questions = 10;
-    double score = correct / (double)questions * 100;
+    string name;
+    int age;
 
-    std::cout << score << '%';
+    cout << "What`s your full name?:";
+    getline(cin >> ws, name); //* serve pegar os espaços do nome
+
+    cout << "What`s your age?:";
+    cin >> age;
+
+    cout << "Hello, " << name << endl;
+    cout << "You are " << age << " years old" << endl;
 
     return 0;
 }
