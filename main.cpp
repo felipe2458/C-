@@ -1,19 +1,22 @@
 #include <iostream>
+#include <cmath>
 
 int main(){
     using namespace std;
 
-    string name;
-    int age;
+    double a;
+    double b;
+    double c;
 
-    cout << "What`s your full name?:";
-    getline(cin >> ws, name); //* serve pegar os espaços do nome
+    cout << "Enter side A: ";
+    cin >> a;
 
-    cout << "What`s your age?:";
-    cin >> age;
+    cout << "Enter side B: ";
+    cin >> b;
 
-    cout << "Hello, " << name << endl;
-    cout << "You are " << age << " years old" << endl;
+    c = sqrt(pow(a, 2) + pow(b, 2));
+
+    cout << "Side C: " << c << endl;
 
     return 0;
 }
