@@ -1,22 +1,20 @@
 #include <iostream>
-#include <cmath>
 
 int main(){
     using namespace std;
 
-    double a;
-    double b;
-    double c;
+    int age;
 
-    cout << "Enter side A: ";
-    cin >> a;
+    cout << "What´s your age?: ";
+    cin >> age;
 
-    cout << "Enter side B: ";
-    cin >> b;
-
-    c = sqrt(pow(a, 2) + pow(b, 2));
-
-    cout << "Side C: " << c << endl;
+    if(age >= 18){
+        cout << "Welcome to site!";
+    }else if(age < 0){
+        cout << "You heven´t been born yet!";
+    }else{
+        cout << "Sorry, you`re too young!";
+    }
 
     return 0;
 }
