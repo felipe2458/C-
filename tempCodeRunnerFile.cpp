@@ -1,2 +1,1 @@
-
-    std::cin >> name;
+}

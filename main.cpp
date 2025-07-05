@@ -1,81 +1,45 @@
 #include <iostream>
+#include <limits>
 
 int main(){
     using namespace std;
 
-    /*int month;
+    int number;
+    int max = 2147483647;
+    char finish = 'n';
 
-    cout << "Enter your month (1-12): ";
-    cin >> month;
+    do{
+        cout << "enter a number and watch it go down to 0!" << endl;
+        cin >> number;
 
-    switch(month){
-        case 1:
-            cout << "It is January!";
-            break;
-        case 2:
-            cout << "It is February!";
-            break;
-        case 3:
-            cout << "It is March!";
-            break;
-        case 4:
-            cout << "It is April!";
-            break;
-        case 5:
-            cout << "It is May!";
-            break;
-        case 6:
-            cout << "It is June!";
-            break;
-        case 7:
-            cout << "It is July!";
-            break;
-        case 8:
-            cout << "It is August!";
-            break;
-        case 9:
-            cout << "It is September!";
-            break;
-        case 10:
-            cout << "It is October!";
-            break;
-        case 11:
-            cout << "It is November!";
-            break;
-        case 12:
-            cout << "It is December!";
-            break;
-        default:
-            cout << "Please enter in only numbers between 1 and 12!";
-            break;
-    }*/
+        while(cin.fail() || number <= 0){
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Please choose a number between 1 and " << max << endl;
+            cin >> number;
+        }
 
-    char grade;
+        while(number > 0){
+            number--;
+            cout << number << endl;
+        }
 
-    cout << "What´s letter grade?: ";
-    cin >> grade;
+        cout << "Do you want to continue? [y/n]" << endl;
+        cin >> finish;
 
-    switch(grade){
-        case 'A':
-            cout << "Excellent!";
-            break;
-        case 'B':
-            cout << "Good!";
-            break;
-        case 'C':
-            cout << "Average!";
-            break;
-        case 'D':
-            cout << "Poor!";
-            break;
-        case 'F':
-            cout << "Fail!";
-            break;
-        default:
-            cout << "Please enter in only letters A, B, C, D, F!";
-            break;
-    }
-    
+        while(cin.fail()){
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Please enter y or n" << endl;
+            cin >> finish;
+        }
+
+        while(finish != 'y' && finish != 'Y' && finish != 'n' && finish != 'N'){
+            cout << "Please enter y or n" << endl;
+            cin >> finish;
+        }
+
+    }while(finish == 'y' || finish == 'Y');
 
     return 0;
 }
