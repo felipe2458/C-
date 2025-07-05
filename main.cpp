@@ -1,23 +1,21 @@
 #include <iostream>
+#include <vector>
 
-namespace first{
-    int x = 10 + 23;
-}
+//typedef  std::vector<std::pair<std::string, int>> pairlist_t;
+//typedef std::string string_t;
+//typedef int num_t;
 
-namespace second{
-    int x = 100 + 323;
-}
+using string_t = std::string;
+using num_t = int;
 
 int main(){
-    using namespace std;
-    using namespace first;
+    //pairlist_t pairList;
 
-    //* int x = 0; caso tenha o: using namespace first e o: int x = 0; quando for usar a variavel x, sera usado o que está no escopo do int main(){}
+    string_t firstName = "Felipe";
+    num_t age = 15;
 
-    // std::cout << x;
-    // para usar isso: std::cout << first::x; não é preciso usar o: using namespace first;
-
-    cout << x;
+    std::cout << firstName << '\n';
+    std::cout << age << '\n';
 
     return 0;
 }
