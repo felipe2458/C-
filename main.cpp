@@ -1,23 +1,14 @@
 #include <iostream>
 
 int main(){
-    int students = 20;
+    //double x = (int) 3.14;
+    //char x = 100;
 
-    //students = students + 1;
-    //students+=1;
-    //students++;
+    int correct = 8;
+    int questions = 10;
+    double score = correct / (double)questions * 100;
 
-    //students = students - 1;
-    //students-=1;
-    //students--;
-
-    //students = students * 2;
-    //students*=2;
-
-    //students = students / 3;
-    //students/=3;
-
-    std::cout << students << std::endl;
+    std::cout << score << '%';
 
     return 0;
 }
