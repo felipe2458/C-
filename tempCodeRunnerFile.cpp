@@ -1,1 +1,1 @@
-}
+    int numbers[10];
